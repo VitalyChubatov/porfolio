@@ -6,8 +6,8 @@ export const Header = () => {
   return (
 		<nav>
 			<ul className='header-container'>
-				<Link to='/about'>Обо мне</Link>
-				<Link to='/'>Мои работы</Link>
+				<Link to='/about'>Мои скиллы</Link>
+				<Link to='/'>Главная</Link>
 				
 			</ul>
 		</nav>

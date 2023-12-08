@@ -1,38 +1,310 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+  
+
+*{
+  font-family: 'Comfortaa', sans-serif;
+
+  padding: 0;
+  margin: 0;
+
+  
+}
+
 .App {
+  width: 100%;
+  max-width: 1480px;
+}
+
+.header-container {
+  margin-top: 30px;
+  display: flex;
+  list-style: none;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.header-container a{ 
+  text-decoration: none;
+  margin-left: 30px;
+  color: black  ;
+}
+
+.header-container a:hover {
+  color: rgb(11, 94, 167);
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 100px;
+}
+
+.photo {
+  display: flex;
+  width: 1000px;
+  height: 930px;
+  background-image: url(./casual-life-3d-young.png);
+  background-repeat: no-repeat;
+   background-position: center;
+     background-size: cover;
+  scale: 0.7;
+}
+
+.photo:hover {
+  scale: 0.73;
+  transition: 1s;
+}
+
+.photo:hover::after {
+  content: 'YOOPPYY';
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 60px;
+  padding: 30px;
+  font-size: 30px;
+  position: relative;
+  left: -30px;
+  color: rgb(14, 10, 10);
+  background-color: aliceblue;
+}
+
+.photo:hover::before {
+  content: 'Сыграем в игру?';
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 60px;
+  padding: 30px;
+  font-size: 30px;
+  position: relative;
+  left: 300px;
+  bottom: 110px;
+  color: rgb(14, 10, 10);
+  background-color: aliceblue;
+}
+
+
+
+.logo {
+  display: flex;
+  width: 400px;
+  align-items: center;
+}
+
+.circle-box {
+  display: flex;
+  align-items: center;
+  text-align: center  ;
+  justify-content: center;
+  margin-left: 25px;
+  flex-wrap: wrap;
+}
+
+.circle-container {
+
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.circle-title {
+  margin-left: 30px;
+}
+
+.circle {
+  margin-left: 30px;
+  margin-top: 10px;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(237, 237, 243);
+  border: 1px solid grey;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  padding: 40px;
+  text-align: start;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.circle:hover {
+  transition: all 1s;
+  scale: 1.05;
+  cursor: pointer;
+  background-color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.telegram-size {
+  color: rgb(27, 92, 148);
+  font-size: 80px;
+  background: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.footer {
+  background-color: black;
+  margin-top: 50px;
+  width: 100%;
+  height: 400px;
+}
+
+.footer-container {
+  margin: 0 200px;
+  color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 40px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.footer-icons {
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer-icons:hover {
+  color: rgb(27, 92, 148);
+  transition: all 0.5s;
+}
+
+.footer-container a {
+  width: 220px;
+  margin-top: 15px;
+  margin-left: 30px;
+  font-size: 15px;
+  color: antiquewhite;
+  text-decoration: none;
+
+}
+
+
+
+@media (width < 1100px) {
+  .header-container li {
+    margin: 0 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+
+.about-container {
+   display: flex;
+    flex-direction: column-reverse;
+}
+
+  .logo-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    margin-right: 50px ; 
   }
+
+  .photo {
+    display: block;
+    background-size: cover;
+    width: 460px;
+    scale: 0.67   ;
+    height: 500px;
+  }
+
+.photo-about-cicrle{
+   display: flex;
+    background-size: cover;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+  }
+
+   .photo-about  {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+
+    }
+
+  .photo:hover::before  {
+    display: none;
+  }
+  .logo {
+    width: 90%;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .footer-container {
+    margin: 0 170px;
+  }
+}
+
+@media (width < 420px) {
+
+
+   .about-me {
+  flex-direction: column;
+  margin-left: 80px;
+  margin-top: 30px;
+   }
+
+
+    .circle-box {
+      margin: 0;
+    }
+
+  .photo {
+    width: 420px;
+    scale: 0.67   ;
+    height: 500px;
+  }
+
+  .logo-container {
+
+    margin-right: 50px;
+    padding: 0;
+  }
+
+  .circle-container {
+    margin-top: 30px;
+    display: block;
+  }
+
+  .about-container {
+   display: flex;
+    flex-direction: column-reverse;
+
+}
+  
+  .photo-about-cicrle{
+   display: flex;
+    background-size: cover;
+    align-items: center;
+    width: 110%;
+    height: 300px;
+    scale: 0.6  ;
+    display: none;
+  }
+
+   .photo-about  {
+    display: flex;
+    align-items: center;
+    width:50%;
+    height:50%;
+    background-size: cover;
+    scale: 0.5   ;
+    }
+}
+
+
+@media (width < 350px) {
+  .photo-about-cicrle {
+    display: none;
+  }
+
+  .photo-about {
+    display: none;
+  }
+  
 }

@@ -184,10 +184,16 @@
 
 
 @media (width < 1100px) {
+
+
   .header-container li {
     margin: 0 10px;
   }
 
+
+.about-me {
+  flex-wrap: wrap;
+} 
 
 .about-container {
    display: flex;

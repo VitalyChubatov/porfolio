@@ -1,30 +1,30 @@
-import React, { useState } from 'react'
-import { Header } from '../Header'
-import { Footer } from '../Footer'
-import { motion } from 'framer-motion'
-import './about.css'
-import { FaGithub } from 'react-icons/fa'
-export const About = () => {
-	const [html,setHtml] = useState(false)
-	const [css, setCss] = useState(false)
-	const [js, setJs] = useState(false)
-	const [react, setReact] = useState(false)
-	const [git, setGit] = useState(false)
+import React, { useState } from 'react';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
+import { motion } from 'framer-motion';
+import './about.css';
+import { FaGithub } from 'react-icons/fa';
+import { AboutSection } from './AboutSection';
 
+export const About = ({ leftHand, isActive }) => {
+	const [html, setHtml] = useState(false);
+	const [css, setCss] = useState(false);
+	const [js, setJs] = useState(false);
+	const [react, setReact] = useState(false);
+	const [git, setGit] = useState(false);
 
-
-	     const cartAnimation = {
-					hidden: {
-						opacity: 0,
-					},
-					visible: {
-						opacity: 1,
-						transition: { duration: 2 },
-					},
-				}
-  return (
-		<>
-			<Header />
+	const cartAnimation = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: { duration: 2 },
+		},
+	};
+	return (
+		<div className={`App ${isActive ? 'dark' : ''}`}>
+			<Header leftHand={leftHand} isActive={isActive} />
 			<article className='about-section-container'>
 				<section className='about-container '>
 					<motion.p className='about-title' initial='hidden' animate='visible'>
@@ -126,7 +126,7 @@ export const About = () => {
 					</div>
 					<div className='about-cart'>
 						<div className='about-circle' onClick={() => setReact(!react)}>
-							<FaGithub/>
+							<FaGithub />
 						</div>
 						{react && (
 							<motion.div
@@ -136,15 +136,18 @@ export const About = () => {
 								variants={cartAnimation}
 							>
 								<h1>Знание GIT :</h1>
-								<br /> 1. Деплой сервера с GITHUB,опыт работы с GITLAB, коммиты, ветки , пуши и т.д 
+								<br /> 1. Деплой сервера с GITHUB,опыт работы с GITLAB, коммиты,
+								ветки , пуши и т.д
 								<br />
-								<br /> 2. Умение обшаться с консоль <br /> 
+								<br /> 2. Умение обшаться с консоль <br />
 							</motion.div>
 						)}
 					</div>
 				</aside>
 			</article>
+			<AboutSection />
+
 			<Footer />
-		</>
-	)
-}
+		</div>
+	);
+};

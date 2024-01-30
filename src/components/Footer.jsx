@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { FaInstagram, FaMailBulk, FaTelegram} from 'react-icons/fa'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaInstagram, FaMailBulk, FaTelegram } from 'react-icons/fa';
 
 export const Footer = () => {
-	const [telegram,setTelegram] = useState(false)
-	const [instagram, SetInstagram] = useState(false)
-	const [mailBulk, setMailBulk] = useState(false)
-  return (
+	const [telegram, setTelegram] = useState(false);
+	const [instagram, SetInstagram] = useState(false);
+	const [mailBulk, setMailBulk] = useState(false);
+	return (
 		<footer className='footer'>
 			<div className='footer-container'>
 				<FaTelegram
@@ -53,5 +53,5 @@ export const Footer = () => {
 				)}
 			</div>
 		</footer>
-	)
-}
+	);
+};

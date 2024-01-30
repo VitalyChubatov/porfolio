@@ -9,48 +9,47 @@ export const Footer = () => {
 	return (
 		<footer className='footer'>
 			<div className='footer-container'>
-				<FaTelegram
-					className='footer-icons'
-					onClick={() => setTelegram(!telegram)}
-				/>
-				{telegram && (
-					<motion.a
-						href='https://t.me/houldC'
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 2 }}
-					>
-						Перейти в Телеграмм
-					</motion.a>
-				)}
-				<FaInstagram
-					className='footer-icons'
-					onClick={() => SetInstagram(!instagram)}
-				/>
-				{instagram && (
-					<motion.a
-						href='https://t.me/houldC'
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 2 }}
-					>
-						Перейти в Инстаграмм
-					</motion.a>
-				)}
-				<FaMailBulk
-					className='footer-icons'
-					onClick={() => setMailBulk(!mailBulk)}
-				/>
-				{mailBulk && (
-					<motion.a
-						href='mailto: chubatovvv@bk.ru'
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 2 }}
-					>
-						chubatovvv@bk.ru
-					</motion.a>
-				)}
+				<motion.a
+					href='https://t.me/houldC'
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 2 }}
+				>
+					<FaTelegram
+						className='footer-icons'
+						onClick={() => setTelegram(!telegram)}
+					/>
+				</motion.a>
+				<motion.a
+					href='https://t.me/houldC'
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 2 }}
+				>
+					<FaInstagram
+						className='footer-icons'
+						onClick={() => SetInstagram(!instagram)}
+					/>
+				</motion.a>
+				<motion.a
+					href='mailto: chubatovvv@bk.ru'
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 2 }}
+				>
+					<FaMailBulk
+						className='footer-icons'
+						onClick={() => setMailBulk(!mailBulk)}
+					/>
+				</motion.a>
+				<motion.a
+					href='mailto: chubatovvv@bk.ru'
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 2 }}
+				>
+					chubatovvv@bk.ru
+				</motion.a>
 			</div>
 		</footer>
 	);

@@ -1,13 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Button } from './Button/Button';
 
 export const Header = ({ leftHand, isActive }) => {
 	return (
 		<nav>
 			<ul className='header-container'>
-				<Link to='/about'>Мои скиллы</Link>
-				<Link to='/'>Главная</Link>
+				<NavLink
+					className={({ isActive }) => (isActive ? 'active' : 'no-active')}
+					to='/'
+				>
+					Главная
+				</NavLink>
+				<NavLink
+					className={({ isActive }) => (isActive ? 'active' : 'no-active')}
+					to='/about'
+				>
+					Мои скиллы
+				</NavLink>
 				<Button leftHand={leftHand} isActive={isActive} />
 			</ul>
 		</nav>

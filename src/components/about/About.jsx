@@ -5,13 +5,15 @@ import { motion } from 'framer-motion';
 import './about.css';
 import { FaGithub } from 'react-icons/fa';
 import { AboutSection } from './AboutSection';
+import { useSelector } from 'react-redux';
 
-export const About = ({ leftHand, isActive }) => {
-	const [html, setHtml] = useState(false);
-	const [css, setCss] = useState(false);
-	const [js, setJs] = useState(false);
-	const [react, setReact] = useState(false);
-	const [git, setGit] = useState(false);
+export const About = () => {
+	const isActive = useSelector(state => state.themeSlice.isActive);
+	const [html, setHtml] = useState(true);
+	const [css, setCss] = useState(true);
+	const [js, setJs] = useState(true);
+	const [react, setReact] = useState(true);
+	const [git, setGit] = useState(true);
 
 	const cartAnimation = {
 		hidden: {
@@ -24,11 +26,11 @@ export const About = ({ leftHand, isActive }) => {
 	};
 	return (
 		<div className={`App ${isActive ? 'dark' : ''}`}>
-			<Header leftHand={leftHand} isActive={isActive} />
+			<Header />
 			<article className='about-section-container'>
 				<section className='about-container '>
 					<motion.p className='about-title' initial='hidden' animate='visible'>
-						ВОЙТИ В АЙТИ
+						МОИ ЗНАНИЯ В
 					</motion.p>
 					<motion.div
 						className='photo-about-cicrle'
@@ -44,7 +46,7 @@ export const About = ({ leftHand, isActive }) => {
 						></motion.div>
 					</motion.div>
 				</section>
-				<h2 className='skills'>SKILLS BUTTON</h2>
+				<h2 className='Heading-title'>SKILLS BUTTON</h2>
 				<aside className='about-me'>
 					<div className='about-cart'>
 						<div className='about-circle' onClick={() => setHtml(!html)}>
@@ -145,6 +147,8 @@ export const About = ({ leftHand, isActive }) => {
 					</div>
 				</aside>
 			</article>
+			<h2 className='Heading-title'>ПРОЙДЕНЫЕ КУРСЫ</h2>
+
 			<AboutSection />
 
 			<Footer />

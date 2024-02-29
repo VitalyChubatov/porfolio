@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button } from './Button/Button';
 
-export const Header = ({ leftHand, isActive }) => {
+export const Header = () => {
 	return (
 		<nav>
 			<ul className='header-container'>
@@ -18,7 +18,7 @@ export const Header = ({ leftHand, isActive }) => {
 				>
 					Мои скиллы
 				</NavLink>
-				<Button leftHand={leftHand} isActive={isActive} />
+				<Button />
 			</ul>
 		</nav>
 	);

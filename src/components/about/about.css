@@ -1,85 +1,120 @@
-
 .photo-about {
-  display: flex;
-  width: 300px;
-  height: 300px;
-  background-image: url(../../it-4.png);
-  background-repeat: no-repeat;
-   background-position: center;
-     background-size: cover;
-  scale: 0.7;
+	display: flex;
+	width: 300px;
+	height: 300px;
+	background-image: url(../../it-4.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	scale: 0.7;
 }
 
 .photo-about-cicrle {
-    display: flex;
-    align-items: center ;
-    justify-content: center;
-      background-image: url(../../—Pngtree—arrow\ circle\ icon\ isolated_5045549.png);
-  background-repeat: no-repeat;
-   background-position: center;
-    background-size: cover;
-    width: 500px;
-  height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../../—Pngtree—arrow\ circle\ icon\ isolated_5045549.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 500px;
+	height: 400px;
 }
-
 
 .about-container {
-  margin-left: 18px;
-  justify-content: center;
+	margin-left: 18px;
+	justify-content: center;
 
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-.skills {
-  display: flex;
-  margin-top: 30px;
-  text-align: center;
-  color: rgb(119, 149, 117);
-  justify-content: center;
-  height: 50px;
-  border: 1px solid rgb(38, 38, 34);
-  align-items: center ;
-  font-size: 30px;
+.Heading-title {
+	display: flex;
+	margin-top: 30px;
+	text-align: center;
+	color: rgb(119, 149, 117);
+	justify-content: center;
+	height: 50px;
+	border: 1px solid rgb(38, 38, 34);
+	align-items: center;
+	font-size: 30px;
 }
 .about-me {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 .about-circle {
-  margin-top: 30px;
-  align-items: center;
-  justify-content: center ;
-  display: flex;
-  margin-left: 30px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 1px solid rgb(119, 149, 117);
+	margin-top: 30px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	margin-left: 30px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 1px solid rgb(119, 149, 117);
 }
 
-.about-circle:hover { 
-  scale: 1.1;
-  border: 5px solid black;
-  transition: all 1s;
+.about-circle:hover {
+	scale: 1.1;
+	border: 5px solid black;
+	transition: all 1s;
 }
 
 .about-title {
-  margin-left: 7%;
-  font-size: 50px;
-  text-align: center;
-  width: 270px;
+	margin-left: 7%;
+	font-size: 40px;
+	text-align: center;
+	width: 270px;
 }
 
 .about-cart {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .about-open-title {
-  text-align: start;
-  width: 240px;
-  margin-left: 30px;
-  margin-top: 30px;
+	text-align: start;
+	width: 240px;
+	margin-left: 30px;
+	margin-top: 30px;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+.card {
+	background-color: rgb(49, 49, 49);
+	color: aliceblue;
+	margin: 20px 0;
+	border: 1px solid black;
+	height: 100%;
+	width: 300px;
+	display: flex;
+	/* align-items: center; */
+	flex-direction: column;
+}
+.card:hover {
+	transition: all 1s;
+	scale: 1.02;
+}
+
+.card h3 {
+	margin: 30px auto;
+	border-bottom: 1px solid black;
+}
+.card p {
+	margin: 30px auto;
+}
+
+@media (width < 780px) {
+	.about-title {
+		margin-right: 30px;
+	}
+
+	.about-container {
+		flex-direction: column;
+	}
+}

@@ -1,7 +1,15 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-export const AboutSectionCard = ({ title, heading, img, href }) => {
+export const AboutSectionCard = ({
+	title,
+	heading,
+	img,
+	href,
+	open,
+	id,
+	tooglePopup,
+}) => {
 	const cartAnimation = {
 		hidden: {
 			y: 200,
@@ -15,25 +23,24 @@ export const AboutSectionCard = ({ title, heading, img, href }) => {
 	};
 
 	return (
-		<a href={href} style={{ marginTop: 30 }}>
-			<motion.div
-				className='card'
-				variants={cartAnimation}
-				viewport={{ amount: 0.2, once: true }}
-				initial='hidden'
-				whileInView='visible'
-			>
-				<h3>{heading}</h3>
-				{/* <hr /> */}
-				<img
-					src={img}
-					alt='courses'
-					width={250}
-					height={200}
-					style={{ margin: '25px' }}
-				/>
-				<p>{title}</p>
-			</motion.div>
-		</a>
+		<motion.div
+			onClick={() => tooglePopup(id)}
+			style={{ marginTop: 30 }}
+			className='card'
+			variants={cartAnimation}
+			viewport={{ amount: 0.2, once: true }}
+			initial='hidden'
+			whileInView='visible'
+		>
+			<h3>{heading}</h3>
+			<img
+				src={img}
+				alt='courses'
+				width={250}
+				height={200}
+				style={{ margin: '25px' }}
+			/>
+			<p>{title}</p>
+		</motion.div>
 	);
 };
